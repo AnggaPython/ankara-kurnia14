@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: Primary;
+  src: url("../public/fonts/P22Mackinac-Book_13.otf");
+}
+@font-face {
+  font-family: TemposMedium;
+  src: url("../public/fonts/P22Mackinac-Medium_6.otf");
+}
+@font-face {
+  font-family: TemposSemibold;
+  src: url("../public/fonts/P22Mackinac-Bold_23.otf");
+}
+@font-face {
+  font-family: TemposBold;
+  src: url("../public/fonts/P22Mackinac-ExtraBold_9.otf");
+}
+@font-face {
+  font-family: TemposLight;
+  src: url("../public/fonts/Tiempos-Font/TiemposHeadline-Light.otf");
+}
+
+.container {
+  max-width: 100vw;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 95vw;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+.anim_active > div {
+  transition: all 2s ease-in-out;
+  animation: anim 0.2s linear forwards;
+  height: 1px;
+  background-color: black;
+}
+
+.anim_nav > div {
+  transition: all 2s ease-in-out;
+  animation: anim 0.2s linear forwards;
+  height: 1px;
+  background-color: white;
+}
+
+@keyframes anim {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+/* .bg {
+  background: url("../public/home/1.png") no-repeat center/cover;
+}
+
+@media screen and (max-width: 500px) {
+  .bg {
+    background: url("../public/home/1_mob.png") no-repeat center/cover;
+  }
+} */
+.video-js,
+.vjs-tech {
+  background-color: rgb(17, 16, 17);
+}
+.vjs-tech {
+  /* max-width: 800px;
+  object-fit: contain; */
+}
